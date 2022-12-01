@@ -1,0 +1,5 @@
+[http]
+	proxy = http://p42.cycu.org:3128
+[user]
+	email = 41023225@gm.nfu.edu.tw
+	name = 41023225
