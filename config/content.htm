@@ -2,15 +2,15 @@
 <p>四設二乙 41023225 陳威成 </p>
 <p></p>
 <p>倉儲: <a href="https://github.com/mdecad2022/site-xiaomantou0411">https://github.com/mdecad2022/site-xiaomantou0411</a></p>
+<p>網頁: <a href="https://mdecad2022.github.io/site-xiaomantou0411/content/index.html">https://mdecad2022.github.io/site-xiaomantou0411/content/index.html</a> </p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a> <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> <a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a></p>
 <p><a href="https://gist.github.com/mdecourse/05930b1775b77293523b59b1bbb43e57">Gist Brython scripts</a></p>
 <p><a href="https://mde.tw/cp2021/content/%E8%A7%A3%E9%A1%8C%E7%B7%B4%E7%BF%92.html">解題練習</a></p>
 <p><a href="https://mde.tw/cp2021/content/Cango.html">Cango</a></p>
 <p>
-<script src="/static/brython.js">// <![CDATA[
-
-// ]]></script>
+<script src="/static/brython.js">
+</script>
 <script src="/static/brython_stdlib.js"></script>
 </p>
 <!-- for ggame -->
@@ -34,11 +34,11 @@
 <!-- for Konva 程式庫 -->
 <p>
 <script src="/static/konva.min.js"></script>
-<script>// <![CDATA[
+<script>
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
-// ]]></script>
+</script>
 </p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
@@ -54,13 +54,13 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 </p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
-<script type="text/javascript">// <![CDATA[
+<script type="text/javascript">
 function doSave(storage_id, filename){
     var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
     filename = document.getElementById(filename).value
     saveAs(blob, filename+".py");
 }
-// ]]></script>
+</script>
 </p>
 <p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button><button id="auto_guess">auto_guess</button><button id="ball">ball</button><button id="bezier">bezier</button><button id="big_lotto">big_lotto</button><button id="brython_kw">brython_kw</button><button id="bunny">bunny</button><button id="cango_spur">cango_spur</button><button id="cango_spur1">cango_spur1</button><button id="cango_three_gears">cango_three_gears</button><button id="clear">clear</button><button id="clock">clock</button><button id="convert_temp">convert_temp</button><button id="deepmerge">deepmerge</button><button id="display_stl">display_stl</button><button id="draw">draw</button><button id="ex1">ex1</button><button id="ex2">ex2</button><button id="ex3">ex3</button><button id="ex4">ex4</button><button id="fibo">fibo</button><button id="fourbar">fourbar</button><button id="guess_a_number">guess_a_number</button><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="keycode">Keycode</button><button id="knova1">knova1</button><button id="merge3">merge3</button><button id="power_lotto">power_lotto</button><button id="spur">spur</button><button id="spur_w_form">spur_w_form</button><button id="stl_binary_ascii">stl_binary_ascii</button><button id="stl_writer">stl_writer</button><button id="tetris">Tetris</button><button id="turtle1">turtle1</button><button id="turtle2">turtle2</button><button id="turtle3">turtle3</button><button id="turtle4">turtle4</button><button id="turtle5">turtle5</button><button id="turtle6">turtle6</button><button id="turtle7">turtle7</button><button id="turtle8">turtle8</button><button id="twl_link_ik">twl_link_ik</button><button id="webcam">webcam</button><button id="websocket">websocket</button><button id="ycqsort">ycqsort</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
@@ -84,7 +84,7 @@ function doSave(storage_id, filename){
 <div class="col-md-0" height="1" id="graphics-column" width="1"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
-<script type="text/python3">// <![CDATA[
+<script type="text/python3">
 from browser import document as doc
 import ace
 
@@ -120,10 +120,10 @@ doc['kw_clear_console1'].bind('click', Ace1.clear_console)
 doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
-// ]]></script>
+</script>
 <!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
 <p><!-- add 1 to 100 開始 -->
-<script type="text/python3">// <![CDATA[
+<script type="text/python3">
 from browser import document as doc
 import ace
 
@@ -442,7 +442,7 @@ tetris_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b5
 tetris = button2(tetris_url)
 doc["tetris"].bind("click", tetris.do)
 ################################## tetris end
-// ]]></script>
+</script>
 </p>
 <h1>Hw</h1>
 <h2>w6</h2>
@@ -474,7 +474,8 @@ var winkVideoData_w6 m3 = {
 </script>
 <!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_w6 m3" height="630" muted="true" width="1008">
-<source src="/downloads/w6 m3.mp4" type="video/mp4"/></video></div><h2>W10</h2>
+<source src="/downloads/w6 m3.mp4" type="video/mp4"/></video></div>
+<h2>W10</h2>
 <p>這個頁面 demo 如何在同一頁面下納入多個線上 Ace 編輯器與執行按鈕.</p>
 <p><button id="add1to100">1 add to 100</button></p>
 <p>將 iterable 與 iterator <a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
@@ -718,10 +719,11 @@ doc["add1to100"].bind('click', add)
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<p></p><h2>w14</h2>
+<p></p>
+<h2>w14</h2>
 <h3>Solvespace</h3>
 <p>影片:</p>
-<script>// <![CDATA[
+<script>
 var winkVideoData_w14wink = {
   dataVersion: 1,
   frameRate: 10,
@@ -730,7 +732,7 @@ var winkVideoData_w14wink = {
   frameStops: {
   },
 };
-// ]]></script>
+</script>
 <!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_w14wink" height="630" muted="true" width="1008">
 <source src="/downloads/w14wink.mp4" type="video/mp4"/></video></div>
@@ -749,7 +751,8 @@ var winkVideoData_w14 nx = {
 <!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_w14 nx" height="630" muted="true" width="1008">
 <source src="/downloads/w14 nx.mp4" type="video/mp4"/></video></div>
-<p></p><h3>Onshape</h3>
+<p></p>
+<h3>Onshape</h3>
 <p>1.CoppeliaSim 演示影片</p>
 <p></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/gc0FhOClGvQ" title="YouTube video player" width="560"></iframe></p>

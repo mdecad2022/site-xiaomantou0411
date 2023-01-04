@@ -147,9 +147,8 @@ img.add_border {
 <p><a href="https://mde.tw/cp2021/content/%E8%A7%A3%E9%A1%8C%E7%B7%B4%E7%BF%92.html">解題練習</a></p>
 <p><a href="https://mde.tw/cp2021/content/Cango.html">Cango</a></p>
 <p>
-<script src="./../cmsimde/static/brython.js">// <![CDATA[
-
-// ]]></script>
+<script src="./../cmsimde/static/brython.js">
+</script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
 </p>
 <!-- for ggame -->
@@ -173,11 +172,11 @@ img.add_border {
 <!-- for Konva 程式庫 -->
 <p>
 <script src="./../cmsimde/static/konva.min.js"></script>
-<script>// <![CDATA[
+<script>
 window.onload=function(){
 brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
-// ]]></script>
+</script>
 </p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
@@ -193,13 +192,13 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 </p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
-<script type="text/javascript">// <![CDATA[
+<script type="text/javascript">
 function doSave(storage_id, filename){
     var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
     filename = document.getElementById(filename).value
     saveAs(blob, filename+".py");
 }
-// ]]></script>
+</script>
 </p>
 <p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button><button id="auto_guess">auto_guess</button><button id="ball">ball</button><button id="bezier">bezier</button><button id="big_lotto">big_lotto</button><button id="brython_kw">brython_kw</button><button id="bunny">bunny</button><button id="cango_spur">cango_spur</button><button id="cango_spur1">cango_spur1</button><button id="cango_three_gears">cango_three_gears</button><button id="clear">clear</button><button id="clock">clock</button><button id="convert_temp">convert_temp</button><button id="deepmerge">deepmerge</button><button id="display_stl">display_stl</button><button id="draw">draw</button><button id="ex1">ex1</button><button id="ex2">ex2</button><button id="ex3">ex3</button><button id="ex4">ex4</button><button id="fibo">fibo</button><button id="fourbar">fourbar</button><button id="guess_a_number">guess_a_number</button><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="keycode">Keycode</button><button id="knova1">knova1</button><button id="merge3">merge3</button><button id="power_lotto">power_lotto</button><button id="spur">spur</button><button id="spur_w_form">spur_w_form</button><button id="stl_binary_ascii">stl_binary_ascii</button><button id="stl_writer">stl_writer</button><button id="tetris">Tetris</button><button id="turtle1">turtle1</button><button id="turtle2">turtle2</button><button id="turtle3">turtle3</button><button id="turtle4">turtle4</button><button id="turtle5">turtle5</button><button id="turtle6">turtle6</button><button id="turtle7">turtle7</button><button id="turtle8">turtle8</button><button id="twl_link_ik">twl_link_ik</button><button id="webcam">webcam</button><button id="websocket">websocket</button><button id="ycqsort">ycqsort</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
@@ -223,7 +222,7 @@ function doSave(storage_id, filename){
 <div class="col-md-0" height="1" id="graphics-column" width="1"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
-<script type="text/python3">// <![CDATA[
+<script type="text/python3">
 from browser import document as doc
 import ace
 
@@ -259,10 +258,10 @@ doc['kw_clear_console1'].bind('click', Ace1.clear_console)
 doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
-// ]]></script>
+</script>
 <!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
 <p><!-- add 1 to 100 開始 -->
-<script type="text/python3">// <![CDATA[
+<script type="text/python3">
 from browser import document as doc
 import ace
 
@@ -581,7 +580,7 @@ tetris_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b5
 tetris = button2(tetris_url)
 doc["tetris"].bind("click", tetris.do)
 ################################## tetris end
-// ]]></script>
+</script>
 </p>
 <br />About << <a href='About.html'>Previous</a> <a href='Hw.html'>Next</a> >> Hw</div>
         
